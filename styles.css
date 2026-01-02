@@ -101,11 +101,16 @@ body {
     margin: 0 auto;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 /* Theme Toggle */
 .theme-toggle-container {
     display: flex;
     align-items: center;
-    margin-right: 15px;
     z-index: 1001;
 }
 
@@ -232,11 +237,35 @@ body {
     box-shadow: 0 0 5px var(--color-accent-blue);
 }
 
-.star-1 { top: 20%; left: 20%; animation-delay: 0s; }
-.star-2 { top: 40%; left: 80%; animation-delay: 0.5s; }
-.star-3 { top: 70%; left: 15%; animation-delay: 1s; }
-.star-4 { top: 85%; left: 70%; animation-delay: 1.5s; }
-.star-5 { top: 30%; left: 60%; animation-delay: 2s; }
+.star-1 {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 40%;
+    left: 80%;
+    animation-delay: 0.5s;
+}
+
+.star-3 {
+    top: 70%;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.star-4 {
+    top: 85%;
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.star-5 {
+    top: 30%;
+    left: 60%;
+    animation-delay: 2s;
+}
 
 .particle {
     position: absolute;
@@ -331,6 +360,7 @@ body {
         transform: translate(-50%, -50%) scale(0.95);
         opacity: 0.7;
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1.05);
         opacity: 0;
@@ -370,68 +400,153 @@ body {
 
 /* Animations */
 @keyframes rotate-sun {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes rotate-moon {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
 @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
+
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
 
 @keyframes glitch {
-    0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(31, 111, 235, 0.7); }
-    70% { box-shadow: 0 0 0 10px rgba(31, 111, 235, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(31, 111, 235, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(31, 111, 235, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(31, 111, 235, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(31, 111, 235, 0);
+    }
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes slide-up {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes reveal-text {
-    from { clip-path: inset(0 100% 0 0); }
-    to { clip-path: inset(0 0 0 0); }
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 @keyframes expand-line {
-    from { width: 0; }
-    to { width: 80px; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
 }
 
 /* Animation Classes */
@@ -538,16 +653,39 @@ body {
 }
 
 /* Apply staggered delays for skill items */
-.skill-list .fade-in-item:nth-child(1) { animation-delay: 0.1s; }
-.skill-list .fade-in-item:nth-child(2) { animation-delay: 0.2s; }
-.skill-list .fade-in-item:nth-child(3) { animation-delay: 0.3s; }
-.skill-list .fade-in-item:nth-child(4) { animation-delay: 0.4s; }
-.skill-list .fade-in-item:nth-child(5) { animation-delay: 0.5s; }
-.skill-list .fade-in-item:nth-child(6) { animation-delay: 0.6s; }
-.skill-list .fade-in-item:nth-child(7) { animation-delay: 0.7s; }
+.skill-list .fade-in-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-list .fade-in-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-list .fade-in-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-list .fade-in-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-list .fade-in-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.skill-list .fade-in-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.skill-list .fade-in-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
 
 /* Typography */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 600;
     line-height: 1.2;
 }
@@ -728,9 +866,17 @@ a:hover {
 }
 
 @keyframes gradient-shift {
-    0% { background-position: 0% center; }
-    50% { background-position: 100% center; }
-    100% { background-position: 0% center; }
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
 }
 
 .hero-title {
@@ -830,10 +976,21 @@ a:hover {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.skill-category:nth-child(1) { transition-delay: 0.1s; }
-.skill-category:nth-child(2) { transition-delay: 0.2s; }
-.skill-category:nth-child(3) { transition-delay: 0.3s; }
-.skill-category:nth-child(4) { transition-delay: 0.4s; }
+.skill-category:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.skill-category:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.skill-category:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.skill-category:nth-child(4) {
+    transition-delay: 0.4s;
+}
 
 .skill-category:hover {
     transform: translateY(-8px);
@@ -923,9 +1080,17 @@ a:hover {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.project-card:nth-child(1) { transition-delay: 0.1s; }
-.project-card:nth-child(2) { transition-delay: 0.2s; }
-.project-card:nth-child(3) { transition-delay: 0.3s; }
+.project-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
 
 .project-card:hover {
     transform: translateY(-10px);
@@ -1035,9 +1200,17 @@ a:hover {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.timeline-item:nth-child(1) { transition-delay: 0.1s; }
-.timeline-item:nth-child(2) { transition-delay: 0.2s; }
-.timeline-item:nth-child(3) { transition-delay: 0.3s; }
+.timeline-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.timeline-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
 
 .timeline-item::before {
     content: '';
@@ -1301,7 +1474,7 @@ a:hover {
     .hero-title {
         font-size: 1.3rem;
     }
-    
+
     /* FIXED: Mobile typewriter text */
     .hero-tagline.typewriter-text {
         white-space: normal;
@@ -1350,8 +1523,12 @@ a:hover {
         gap: 20px;
     }
 
+    .nav-right {
+        gap: 15px;
+    }
+
     .theme-toggle-container {
-        margin-right: 10px;
+        margin-right: 0;
     }
 
     .theme-toggle {
@@ -1372,7 +1549,7 @@ a:hover {
         width: 250px;
         height: 250px;
     }
-    
+
     .security-badge {
         font-size: 0.7rem;
         padding: 6px 12px;
@@ -1398,7 +1575,9 @@ a:hover {
         font-size: 1.1rem;
     }
 
-    .skill-category, .project-card, .contact-item {
+    .skill-category,
+    .project-card,
+    .contact-item {
         padding: 20px;
     }
 
@@ -1424,7 +1603,7 @@ a:hover {
     .contact-info {
         grid-template-columns: 1fr;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
